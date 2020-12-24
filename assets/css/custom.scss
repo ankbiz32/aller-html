@@ -1,8 +1,17 @@
 *,*::after,*::before{
     font-family: 'Sintony','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.btn-outline-light:hover {
+    color: #f8f9fa;
+    background-color: transparent;
+    background-image: none;
+    border-color: #f8f9fa;
+}
 .lato{
     font-family: 'Lato',sans-serif !important;
+}
+.bg-blue{
+    background-color: #1381A5;
 }
 a:hover{
     text-decoration: none;
@@ -10,17 +19,23 @@ a:hover{
 .material-icons{
     transition: 0.3s;
 }
-
+section{
+    padding: 50px 0;
+}
 a.cta{
     background-color: #F7921F;
     border-radius: 8px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    span{
+        transform: translateZ(20px);
+    }
 }
 nav{
     a{
         font-size: 14px;
     }
 }
-
 .header-logo-link{
     position: absolute;
     top: 30px;
@@ -41,7 +56,6 @@ nav{
         cursor: pointer;
     }
 }
-
 .c-nav-links a:last-child{
     position: relative;
     &::after{
@@ -55,16 +69,35 @@ nav{
         background-color: #ccc;
     }
 }
+.orange-highlight{
+    color: #FF9C0C;
+}
+.mt--10{
+    margin-top: -100px;
+}
+.mt--5{
+    margin-top: -50px;
+}
+.mt--4{
+    margin-top: -40px;
+}
+.mt--3{
+    margin-top: -30px;
+}
+.mt--2{
+    margin-top: -20px;
+}
+
 
 header{
-    height: calc(100vh - 72px);
+    min-height: calc(100vh - 72px);
     position: relative;
     .header-video{
         position: absolute;
         right: 0;
         top: -2px;
         height: 100%;
-        width: 38%;
+        width: 43%;
         &::after{
             content: "";
             position: absolute;
@@ -97,15 +130,95 @@ header{
         }
     }
     .content{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        // position: absolute;
+        margin-top: 130px;
         z-index: 1;
         h1{
             font-weight: 700;
         }
     }
+    .header-cards{
+        .cardL{
+            border-top: 3px solid #e4374b;
+        }
+        .cardM{
+            margin-top: 50px;
+            border-top: 3px solid #2987DE;
+        }
+        .cardR{
+            margin-top: -50px;
+            z-index: 1;
+            border-top: 3px solid #12DA82;
+        }
+    }
 }
+
+section.services{
+    margin-top: 200px;
+    .no-head .service{
+        border-radius: 10px;
+        background: #888;
+        position: relative;
+        svg{
+            z-index: 1;
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            transform: translateX(-50%);
+        }
+    }
+    .with-head .service{
+        border-radius: 10px;
+        background: #888;
+        position: relative;
+        svg{
+            z-index: 1;
+            position: absolute;
+            top: 30px;
+            right: 0px;
+            transform: translateX(50%);
+        }
+    }
+}
+
+section.huge{
+    ul{
+        padding-left: 20px;
+        font-size: 14px;
+    }
+}
+
+section.testimonials{
+    margin-top: 200px;
+    .counts{
+        border-top-left-radius:30px ;
+        border-top-right-radius:30px ;
+        box-shadow: 0 10px 15px #aaa;
+        .mid-count{
+            &::after{
+                content:'';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width:2px;
+                height:100px;
+                background-color: #86b7c7;
+            }
+            &::before{
+                content:'';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width:2px;
+                height:100px;
+                background-color: #86b7c7;
+            }
+        }
+    }
+}
+
 
 @media(max-width:768px){
     .c-nav-links a:last-child{
@@ -113,16 +226,62 @@ header{
             display: none;
         }
     }
-
+    .header-logo-link{
+        &::after{
+            height: 200px;
+        }
+    }
     header{
         .content{
-            top: 40%;
+            margin-top: 80px;
             h1{
                 font-weight: 700;
                 font-size: 30px;
             }
             a.cta{
                 background-color: #F7921F;
+            }
+        }
+        .header-cards{
+            .cardL{
+                margin: 0 15px;
+            }
+            .cardM{
+                margin: 20px 15px !important;
+            }
+            .cardR{
+                margin: 0 15px;
+            }
+        }
+    }
+    section.services{
+        .with-head .service{
+            border-radius: 10px;
+            background: #888;
+            position: relative;
+            svg{
+                z-index: 1;
+                position: absolute;
+                top: 30px;
+                left: 0px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    section.huge{
+        h1{
+            font-size: 35px;
+        }
+    }
+    section.testimonials{
+        .counts{
+            border-top-left-radius:20px ;
+            border-top-right-radius:20px ;
+            h1{
+                font-size: 25px;
+            }
+            p{
+                font-size: 12px;
             }
         }
     }

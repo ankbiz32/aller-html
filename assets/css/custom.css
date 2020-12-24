@@ -2,8 +2,19 @@
   font-family: 'Sintony','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.btn-outline-light:hover {
+  color: #f8f9fa;
+  background-color: transparent;
+  background-image: none;
+  border-color: #f8f9fa;
+}
+
 .lato {
   font-family: 'Lato',sans-serif !important;
+}
+
+.bg-blue {
+  background-color: #1381A5;
 }
 
 a:hover {
@@ -15,9 +26,22 @@ a:hover {
   transition: 0.3s;
 }
 
+section {
+  padding: 50px 0;
+}
+
 a.cta {
   background-color: #F7921F;
   border-radius: 8px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+}
+
+a.cta span {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
 }
 
 nav a {
@@ -64,8 +88,32 @@ nav a {
   background-color: #ccc;
 }
 
+.orange-highlight {
+  color: #FF9C0C;
+}
+
+.mt--10 {
+  margin-top: -100px;
+}
+
+.mt--5 {
+  margin-top: -50px;
+}
+
+.mt--4 {
+  margin-top: -40px;
+}
+
+.mt--3 {
+  margin-top: -30px;
+}
+
+.mt--2 {
+  margin-top: -20px;
+}
+
 header {
-  height: calc(100vh - 72px);
+  min-height: calc(100vh - 72px);
   position: relative;
 }
 
@@ -74,7 +122,7 @@ header .header-video {
   right: 0;
   top: -2px;
   height: 100%;
-  width: 38%;
+  width: 43%;
 }
 
 header .header-video::after {
@@ -120,10 +168,7 @@ header .header-video img {
 }
 
 header .content {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  margin-top: 130px;
   z-index: 1;
 }
 
@@ -131,12 +176,104 @@ header .content h1 {
   font-weight: 700;
 }
 
+header .header-cards .cardL {
+  border-top: 3px solid #e4374b;
+}
+
+header .header-cards .cardM {
+  margin-top: 50px;
+  border-top: 3px solid #2987DE;
+}
+
+header .header-cards .cardR {
+  margin-top: -50px;
+  z-index: 1;
+  border-top: 3px solid #12DA82;
+}
+
+section.services {
+  margin-top: 200px;
+}
+
+section.services .no-head .service {
+  border-radius: 10px;
+  background: #888;
+  position: relative;
+}
+
+section.services .no-head .service svg {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+section.services .with-head .service {
+  border-radius: 10px;
+  background: #888;
+  position: relative;
+}
+
+section.services .with-head .service svg {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+section.huge ul {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+section.testimonials {
+  margin-top: 200px;
+}
+
+section.testimonials .counts {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  -webkit-box-shadow: 0 10px 15px #aaa;
+          box-shadow: 0 10px 15px #aaa;
+}
+
+section.testimonials .counts .mid-count::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2px;
+  height: 100px;
+  background-color: #86b7c7;
+}
+
+section.testimonials .counts .mid-count::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2px;
+  height: 100px;
+  background-color: #86b7c7;
+}
+
 @media (max-width: 768px) {
   .c-nav-links a:last-child::after {
     display: none;
   }
+  .header-logo-link::after {
+    height: 200px;
+  }
   header .content {
-    top: 40%;
+    margin-top: 80px;
   }
   header .content h1 {
     font-weight: 700;
@@ -144,6 +281,41 @@ header .content h1 {
   }
   header .content a.cta {
     background-color: #F7921F;
+  }
+  header .header-cards .cardL {
+    margin: 0 15px;
+  }
+  header .header-cards .cardM {
+    margin: 20px 15px !important;
+  }
+  header .header-cards .cardR {
+    margin: 0 15px;
+  }
+  section.services .with-head .service {
+    border-radius: 10px;
+    background: #888;
+    position: relative;
+  }
+  section.services .with-head .service svg {
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  section.huge h1 {
+    font-size: 35px;
+  }
+  section.testimonials .counts {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  section.testimonials .counts h1 {
+    font-size: 25px;
+  }
+  section.testimonials .counts p {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=custom.css.map */
