@@ -34,6 +34,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
     <link href="./assets/css/float_label.css" rel="stylesheet" type="text/css"/>
     <link href="./assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -304,6 +307,22 @@
        </div>
    </section>
 
+   <section class="work">
+       <div class="container">
+           <div class="row heading">
+               <div class="col-sm-5">
+                    <a href="" class="">See all >></a>
+                    <h1 class="lato font-weight-bold">Our recent <span class="orange-highlight">projects</span> </h1>
+               </div>
+           </div> 
+           <div class="owl-carousel">
+                <img src="http://placehold.it/320x240?text=Slide%200">
+                <img src="http://placehold.it/320x240?text=Slide%201">
+                <img src="http://placehold.it/320x240?text=Slide%202">
+                <img src="http://placehold.it/320x240?text=Slide%203">
+          </div>
+       </div>
+   </section>
    <div class="container counts-container">
     <div class="row counts text-center text-white bg-blue flex-nowrap">
         <div class="col-4 pt-sm-5 pb-sm-5 pt-4 pb-3 px-3">
@@ -447,6 +466,7 @@
 
     
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.js"></script>
     <script src="./assets/js/tilt.jquery.min.js"></script>
     <script src="./assets/js/float_label.js"></script>
     <script>
@@ -477,6 +497,16 @@
           $('.'+id).show();
         }
         document.getElementById("defaultOpen").click();
+
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            autoplay: true,
+            items: 1,
+            nav: true,
+            autoplayHoverPause: true,
+            animateOut: 'slideOutUp',
+            animateIn: 'slideInUp'
+        });
     </script>
     
 </body>

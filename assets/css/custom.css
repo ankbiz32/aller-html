@@ -476,6 +476,45 @@ footer .footer-logo {
   border-radius: 100px;
 }
 
+.work .row.heading h1:after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  width: 150px;
+  height: 3px;
+  background-color: #F7921F;
+}
+
+.work .owl-carousel .owl-nav {
+  padding-top: .4em;
+  font-size: .8em;
+}
+
+.work .owl-carousel .owl-nav > div {
+  padding: .4em 1.4em;
+  border: 1px solid #333;
+  background: #000;
+  color: white;
+  border-radius: .4em;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(0, 0, 0, 0.2)));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.2));
+  -webkit-box-shadow: 0.1em 0.1em 0.4em rgba(0, 0, 0, 0.5);
+          box-shadow: 0.1em 0.1em 0.4em rgba(0, 0, 0, 0.5);
+}
+
+.work .owl-carousel .owl-nav > div:hover {
+  background-color: #333;
+}
+
+.work .owl-carousel .owl-nav .owl-prev {
+  float: left;
+}
+
+.work .owl-carousel .owl-nav .owl-next {
+  float: right;
+}
+
 @media (max-width: 768px) {
   .c-nav-links a:last-child::after {
     display: none;
