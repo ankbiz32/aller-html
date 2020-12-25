@@ -1,0 +1,47 @@
+
+/* NOTE : Put the label tag below the input/textarea tag */
+
+.float-group{
+    position:relative;
+}
+
+input:focus,
+textarea:focus{
+    box-shadow:none;
+}
+
+input + label{
+    position:absolute; 
+    left:30px; 
+    top:50%;
+    transform: translateY(-50%);
+    transition:all 0.3s; 
+    color:#666; 
+    font-weight:lighter;
+    cursor: text;
+    font-size: 14px;
+}
+textarea + label{
+    position:absolute; 
+    left:30px; 
+    top:15px;
+    transition:all 0.3s; 
+    color:#666; 
+    font-weight:lighter;
+    cursor: text;
+    font-size: 14px;
+}
+
+
+input:focus ~ label, 
+textarea:focus ~ label,
+.fl-active{
+    left:20px; 
+    top:0px;
+    transform: translateY(-110%);
+    padding:0;
+    color: #444 !important;
+    font-size: 12px;
+}
+
+ /* NOTE : Put the label tag below the input/textarea tag */

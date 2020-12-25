@@ -14,7 +14,11 @@
 }
 
 .bg-blue {
-  background-color: #1381A5;
+  background-color: #1381A5 !important;
+}
+
+.bg-orange {
+  background-color: #F7921F !important;
 }
 
 a:hover {
@@ -230,18 +234,55 @@ section.huge ul {
   font-size: 14px;
 }
 
-section.testimonials {
-  margin-top: 200px;
+section.huge .thumb {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-section.testimonials .counts {
+section.huge .thumb:hover {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+section.huge a.btn {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+}
+
+section.huge a.btn span {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+
+.counts-container {
+  margin-bottom: 230px;
+  position: relative;
+}
+
+.counts-container .counts {
+  width: 80%;
+  position: absolute;
+  top: 100px;
+  left: 51.5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   -webkit-box-shadow: 0 10px 15px #aaa;
           box-shadow: 0 10px 15px #aaa;
 }
 
-section.testimonials .counts .mid-count::after {
+.counts-container .counts h1 {
+  font-size: 60px;
+}
+
+.counts-container .counts p {
+  font-size: 14px;
+}
+
+.counts-container .counts .mid-count::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -253,7 +294,7 @@ section.testimonials .counts .mid-count::after {
   background-color: #86b7c7;
 }
 
-section.testimonials .counts .mid-count::before {
+.counts-container .counts .mid-count::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -263,6 +304,176 @@ section.testimonials .counts .mid-count::before {
   width: 2px;
   height: 100px;
   background-color: #86b7c7;
+}
+
+section.testimonials {
+  background-color: #eee;
+  position: relative;
+  z-index: -1;
+}
+
+section.testimonials .container {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+section.testimonials .container .tab {
+  overflow: hidden;
+}
+
+section.testimonials .container .tab button {
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  margin-right: 40px;
+  border-radius: 50%;
+  -webkit-transition: 0.3s -webkit-transform;
+  transition: 0.3s -webkit-transform;
+  transition: 0.3s transform;
+  transition: 0.3s transform, 0.3s -webkit-transform;
+  opacity: 0.7;
+}
+
+section.testimonials .container .tab button:hover {
+  border: 6px solid #1381A5;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+section.testimonials .container .tab button.active {
+  border: 6px solid #1381A5;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+section.testimonials .container .tabcontent {
+  display: none;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+          animation: fadeEffect 1s;
+  /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.clients-container {
+  position: relative;
+}
+
+.clients-container .clients {
+  background-color: white;
+  width: 90%;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -75px;
+  -webkit-box-shadow: 0 2px 20px #00000044;
+          box-shadow: 0 2px 20px #00000044;
+  padding-right: 60px;
+  z-index: 1;
+  overflow-x: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.clients-container .clients::-webkit-scrollbar {
+  height: 10px;
+}
+
+.clients-container .clients::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+.clients-container .clients::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.clients-container .clients img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.6;
+  margin-right: 60px;
+}
+
+.clients-container .clients img:first-child {
+  margin-left: 60px;
+}
+
+.contact .form-container {
+  border-bottom-left-radius: 80px;
+}
+
+.contact .form-container h1 {
+  margin-top: 200px;
+}
+
+.contact .form-container img {
+  margin-top: 150px;
+  margin-left: 90px;
+  opacity: 0.3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact .form-container form input, .contact .form-container form textarea {
+  width: 100%;
+  border: 0;
+  padding: 12px;
+  outline: none;
+  background-color: #f7a64a;
+  color: white;
+  border-radius: 10px;
+  resize: none;
+}
+
+.contact .form-container form a.btn {
+  padding: 10px 60px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px);
+          transform: perspective(1000px);
+}
+
+.contact .form-container form a.btn span {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+
+footer .footer-logo {
+  border-radius: 100px;
 }
 
 @media (max-width: 768px) {
@@ -307,15 +518,59 @@ section.testimonials .counts .mid-count::before {
   section.huge h1 {
     font-size: 35px;
   }
-  section.testimonials .counts {
+  .counts-container .counts {
+    left: 54%;
+    width: 95%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-  section.testimonials .counts h1 {
+  .counts-container .counts h1 {
     font-size: 25px;
   }
-  section.testimonials .counts p {
+  .counts-container .counts p {
     font-size: 12px;
+  }
+  .testimonials .counts-container {
+    margin-bottom: 100px !important;
+  }
+  .testimonials .container {
+    padding-top: 80px !important;
+  }
+  .testimonials .tabcontent p {
+    font-size: 16px;
+  }
+  .testimonials .tab {
+    overflow-x: visible !important;
+  }
+  .testimonials .tab button {
+    margin-bottom: 20px;
+    width: 50px !important;
+    height: 50px !important;
+    margin-right: 20px !important;
+  }
+  .contact .clients-container .clients {
+    z-index: 1;
+    overflow-x: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .contact .form-container {
+    padding-bottom: 60px;
+  }
+  .contact .form-container img {
+    margin-top: 170px;
+    margin-left: 0px;
+    opacity: 0.3;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 200px !important;
+  }
+  .contact .form-container h1 {
+    margin-top: 40px;
+    font-size: 30px;
   }
 }
 /*# sourceMappingURL=custom.css.map */
