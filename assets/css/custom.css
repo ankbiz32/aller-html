@@ -106,18 +106,6 @@ nav a {
   z-index: 1;
 }
 
-.header-logo-link::after {
-  content: "";
-  position: absolute;
-  bottom: -30px;
-  left: 0px;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  height: 100vh;
-  width: 2px;
-  background-color: #ccc;
-}
-
 .header-logo-link img {
   height: 80px;
   cursor: pointer;
@@ -143,7 +131,6 @@ header .header-video::after {
   left: 0;
   width: 100%;
   height: 100%;
-  color: red;
   background-color: #000000aa;
   border-top-left-radius: 10px;
 }
@@ -202,7 +189,22 @@ header .header-cards .cardR {
   border-top: 3px solid #12DA82;
 }
 
+header::before {
+  content: '';
+  position: absolute;
+  height: 98%;
+  width: 2px;
+  bottom: -50px;
+  left: 30px;
+  background-color: #ccc;
+}
+
 section.services {
+  margin-top: 100px;
+  position: relative;
+}
+
+section.services .container {
   margin-top: 200px;
 }
 
@@ -236,6 +238,56 @@ section.services .with-head .service svg {
           transform: translateX(50%);
 }
 
+section.services img.pattern1 {
+  position: absolute;
+  top: 0;
+  left: -90px;
+  height: 100%;
+}
+
+section.services img.pattern2 {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  height: 250px;
+}
+
+section.services img.pattern3 {
+  position: absolute;
+  bottom: -190px;
+  right: 0px;
+  height: 500px;
+  z-index: -1;
+}
+
+section.services::after {
+  content: '';
+  position: absolute;
+  width: calc(80% - 30px);
+  height: 2px;
+  top: -50px;
+  right: 20%;
+  background-color: #ccc;
+}
+
+section.services .with-head {
+  position: relative;
+}
+
+section.services .with-head::before {
+  content: '';
+  position: absolute;
+  height: 180px;
+  width: 270px;
+  top: -20px;
+  right: 95px;
+  -webkit-transform: translate(100%, -100%);
+          transform: translate(100%, -100%);
+  background-color: #fff;
+  border-left: 2px solid #ccc;
+  z-index: 1;
+}
+
 section.huge ul {
   padding-left: 20px;
   font-size: 14px;
@@ -261,6 +313,107 @@ section.huge a.btn {
 section.huge a.btn span {
   -webkit-transform: translateZ(20px);
           transform: translateZ(20px);
+}
+
+.work {
+  margin-top: 150px;
+  position: relative;
+}
+
+.work img.pattern1 {
+  position: absolute;
+  top: -50px;
+  left: -10px;
+  height: 450px;
+}
+
+.work img.pattern2 {
+  position: absolute;
+  top: 350px;
+  right: 0px;
+  height: 630px;
+}
+
+.work img.pattern3 {
+  position: absolute;
+  top: 510px;
+  right: 110px;
+  height: 400px;
+}
+
+.work img.pattern4 {
+  position: absolute;
+  top: -240px;
+  right: 230px;
+  height: 310px;
+  z-index: -1;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.work img.pattern5 {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  height: 140px;
+  z-index: -1;
+}
+
+.work .row.heading {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.work .row.heading .v-line {
+  position: absolute;
+  top: -25px;
+  left: 50px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  width: 2px;
+  height: 200px;
+  opacity: 0.7;
+}
+
+.work .row.heading h1:after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  width: 150px;
+  height: 3px;
+  background-color: #F7921F;
+}
+
+.work .owl-carousel .item .left-col .row img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.work .owl-carousel .item .right-col .imgT {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.work .owl-carousel .item .right-col .imgB {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.work .owl-carousel .owl-nav {
+  display: none;
 }
 
 .counts-container {
@@ -317,6 +470,14 @@ section.testimonials {
   background-color: #eee;
   position: relative;
   z-index: -1;
+  overflow-x: hidden;
+}
+
+section.testimonials img.pattern1 {
+  position: absolute;
+  top: 130px;
+  right: -50px;
+  height: 250px;
 }
 
 section.testimonials .container {
@@ -441,6 +602,18 @@ section.testimonials .container .tabcontent {
   margin-left: 60px;
 }
 
+.contact {
+  position: relative;
+}
+
+.contact img.pattern1 {
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  height: 120px;
+  z-index: 1;
+}
+
 .contact .form-container {
   border-bottom-left-radius: 80px;
 }
@@ -481,53 +654,12 @@ section.testimonials .container .tabcontent {
           transform: translateZ(20px);
 }
 
+footer {
+  font-size: 14px;
+}
+
 footer .footer-logo {
   border-radius: 100px;
-}
-
-.work .row.heading {
-  margin-bottom: 120px;
-}
-
-.work .row.heading h1:after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  left: 15px;
-  width: 150px;
-  height: 3px;
-  background-color: #F7921F;
-}
-
-.work .owl-carousel .item .left-col .row img {
-  width: 100%;
-  height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-.work .owl-carousel .item .right-col .imgT {
-  width: 100%;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-.work .owl-carousel .item .right-col .imgB {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-.work .owl-carousel .owl-nav {
-  display: none;
 }
 
 @media (max-width: 768px) {
@@ -549,9 +681,9 @@ footer .footer-logo {
   .c-nav-links span.links-container {
     padding: 50px 30px;
     background: #d9f2fa !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -622,6 +754,11 @@ footer .footer-logo {
   header .content a.cta {
     background-color: #F7921F;
   }
+  header .header-cards {
+    margin-top: 0 !important;
+    padding-top: 20px;
+    background-color: white !important;
+  }
   header .header-cards .cardL {
     margin: 0 15px;
   }
@@ -630,6 +767,9 @@ footer .footer-logo {
   }
   header .header-cards .cardR {
     margin: 0 15px;
+  }
+  header::before {
+    z-index: -1;
   }
   section.services {
     margin-top: 100px;
@@ -655,6 +795,27 @@ footer .footer-logo {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
+  section.services img.pattern1 {
+    position: absolute;
+    top: 0;
+    left: -90px;
+    height: 450px;
+  }
+  section.services img.pattern2 {
+    display: none;
+  }
+  section.services img.pattern3 {
+    bottom: 0px;
+    right: 0px;
+    height: 400px;
+  }
+  section.services .with-head {
+    position: relative;
+  }
+  section.services .with-head::before {
+    width: 60px;
+    right: 95px;
+  }
   section.huge h1 {
     font-size: 35px;
   }
@@ -674,9 +835,6 @@ footer .footer-logo {
   .counts-container .counts p {
     font-size: 12px;
   }
-  .testimonials .container {
-    padding-bottom: 90px !important;
-  }
   .testimonials .counts-container {
     margin-bottom: 100px !important;
   }
@@ -695,6 +853,10 @@ footer .footer-logo {
     height: 80px !important;
     margin-right: 20px !important;
   }
+  .testimonials img.pattern1 {
+    height: 200px !important;
+    top: 40px !important;
+  }
   .clients-container .clients::-webkit-scrollbar {
     height: 2px;
   }
@@ -706,6 +868,9 @@ footer .footer-logo {
     display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  .contact .clients-container .clients::-webkit-scrollbar {
+    height: 0px;
   }
   .contact .form-container {
     padding-bottom: 60px;
@@ -735,6 +900,28 @@ footer .footer-logo {
   .work .owl-carousel .item .right-col .imgB {
     width: 100% !important;
     height: 200px;
+  }
+  .work img.pattern1 {
+    height: 400px;
+  }
+  .work img.pattern2 {
+    display: none;
+  }
+  .work img.pattern3 {
+    display: none;
+  }
+  .work img.pattern4 {
+    position: absolute;
+    top: -190px;
+    right: 0px;
+    height: 200px;
+    z-index: 1;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .work img.pattern5 {
+    bottom: -70px;
+    height: 90px;
   }
 }
 /*# sourceMappingURL=custom.css.map */
