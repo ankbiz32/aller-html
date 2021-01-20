@@ -673,6 +673,10 @@ a.cta span {
   footer .footer-logo {
     border-radius: 100px;
   }
+  .sub-header .container .col-5 {
+    margin-top: -2px;
+    height: 250px;
+  }
 }
 
 @media (max-width: 1366px) {

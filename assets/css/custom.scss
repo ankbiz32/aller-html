@@ -638,7 +638,12 @@ a.cta{
     }
 
     .sub-header{
-        
+        .container{
+            .col-5{
+                margin-top: -2px;
+                height: 250px;
+            }
+        }
     }
 }
 
