@@ -673,9 +673,57 @@ a.cta span {
   footer .footer-logo {
     border-radius: 100px;
   }
-  .sub-header .container .col-5 {
+  .sub-header {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0)));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  }
+  .sub-header .lg-img {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    height: 400px;
+    width: 45%;
+  }
+  .sub-header .container .row {
+    height: 400px;
+  }
+  .sub-header .container .sub-header-content {
+    position: relative;
+  }
+  .sub-header .container .sub-header-content:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    height: 00px;
+    width: 2px;
+    background: #1381A5;
+  }
+  .sub-header .container .sub-header-img {
     margin-top: -2px;
-    height: 250px;
+    height: 100%;
+  }
+  .sub-header + .services:after {
+    display: none;
+  }
+  .sub-header + .services .with-head:before {
+    display: none;
+  }
+  .all-services {
+    overflow: hidden;
+  }
+  .all-services .all-service {
+    height: 400px;
+    background-color: white !important;
+    margin-bottom: 50px;
+  }
+  .all-services .all-service:nth-child(even) {
+    background-color: #fafafa !important;
   }
 }
 
@@ -1047,6 +1095,31 @@ a.cta span {
   .work img.pattern5 {
     bottom: -70px;
     height: 90px;
+  }
+  .sub-header {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(126, 97, 97, 0.1)), color-stop(30%, white));
+    background: linear-gradient(to top, rgba(126, 97, 97, 0.1) 10%, white 30%);
+    margin-top: 45px;
+  }
+  .sub-header .container .sub-header-content {
+    margin-top: -50px;
+  }
+  .sub-header .container .sub-header-content p {
+    font-size: 14px;
+  }
+  .sub-header .container .sub-header-img {
+    margin-top: 0;
+    margin-bottom: 20px;
+    height: 200px;
+  }
+  .all-services {
+    padding-top: 0;
+  }
+  .all-services .all-service {
+    padding-left: 20px;
+    height: 400px;
+    background: none !important;
+    margin-bottom: 50px;
   }
 }
 /*# sourceMappingURL=custom.css.map */
