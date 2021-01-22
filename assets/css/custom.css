@@ -725,6 +725,72 @@ a.cta span {
   .all-services .all-service:nth-child(even) {
     background-color: #fafafa !important;
   }
+  .all-services .all-service .all-service-content svg {
+    display: none;
+  }
+  .all-trainings {
+    margin-top: 60px;
+    position: relative;
+  }
+  .all-trainings .training {
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 15px #00000033;
+            box-shadow: 0 5px 15px #00000033;
+    margin-bottom: 50px;
+  }
+  .all-trainings .training .img-container {
+    padding: 0;
+    position: relative;
+  }
+  .all-trainings .training .img-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #00000033;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .all-trainings .training .img-container img {
+    height: 250px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .all-trainings .training p {
+    font-size: 14px;
+  }
+  .all-trainings img.pattern1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    width: 70%;
+    height: 500px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  .all-trainings img.pattern2 {
+    position: absolute;
+    top: 600px;
+    left: 0px;
+    height: 600px;
+    z-index: -1;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  .all-trainings img.pattern3 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 180px;
+    z-index: -1;
+  }
 }
 
 @media (max-width: 1366px) {
@@ -1119,7 +1185,33 @@ a.cta span {
     padding-left: 20px;
     height: 400px;
     background: none !important;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
+  }
+  .all-services .all-service-content svg {
+    display: block !important;
+  }
+  .all-trainings .training {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+  .all-trainings .training .img-container {
+    padding: 0;
+    position: relative;
+  }
+  .all-trainings .training .img-container img {
+    height: 190px;
+  }
+  .all-trainings img.pattern1 {
+    width: 70%;
+    height: 500px;
+  }
+  .all-trainings img.pattern2 {
+    height: 400px;
+    width: 300px;
+  }
+  .all-trainings img.pattern3 {
+    bottom: 10px;
+    height: 120px;
   }
 }
 /*# sourceMappingURL=custom.css.map */
