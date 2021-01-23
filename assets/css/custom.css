@@ -80,10 +80,10 @@ a.cta span {
 }
 
 @media (max-width: 4500px) {
-  nav .c-nav-links a:last-child {
+  nav .c-nav-links a.c-nav-link:nth-last-child(2) {
     position: relative;
   }
-  nav .c-nav-links a:last-child::after {
+  nav .c-nav-links a.c-nav-link:nth-last-child(2)::after {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -791,6 +791,36 @@ a.cta span {
     height: 180px;
     z-index: -1;
   }
+  .clients-container.main-contact {
+    color: #ffffff77;
+    margin-top: 230px;
+    position: relative;
+  }
+  .clients-container.main-contact .clients {
+    position: relative;
+    background-color: #1381A5;
+    width: 60%;
+    position: absolute;
+    margin-top: -330px;
+    padding-right: 0px;
+    padding-left: 10%;
+    z-index: 1;
+    display: block;
+  }
+  .clients-container.main-contact .clients .phone {
+    margin: 30px 0;
+  }
+  .clients-container.main-contact .clients p {
+    color: #ffffffff !important;
+  }
+  .clients-container.main-contact .clients .pattern6 {
+    position: absolute;
+    right: -60px;
+    top: 20px;
+    z-index: 3;
+    height: 140px;
+    opacity: 0.1;
+  }
 }
 
 @media (max-width: 1366px) {
@@ -854,12 +884,63 @@ a.cta span {
   }
 }
 
+@media (max-width: 1050px) {
+  .header-logo-link::after {
+    height: 200px;
+  }
+  header {
+    height: auto;
+  }
+  header .content {
+    margin-top: 170px;
+  }
+  header .content h1 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  header .content a.cta {
+    background-color: #F7921F;
+  }
+  header .header-cards {
+    margin-top: 0 !important;
+    padding-top: 20px;
+    background-color: white !important;
+  }
+  header .header-cards .column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  header .header-cards .cardL {
+    margin: 0 15px;
+  }
+  header .header-cards .cardM {
+    margin: 20px 15px !important;
+  }
+  header .header-cards .cardR {
+    margin: 0 15px;
+  }
+  header::before {
+    z-index: -1;
+  }
+  header .nml-header-vid {
+    display: none !important;
+  }
+  .c-nav-links span.links-container a.c-nav-link:nth-last-child(2) {
+    position: relative;
+  }
+  .c-nav-links span.links-container a.c-nav-link:nth-last-child(2)::after {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .c-nav-links {
+    overflow-y: scroll;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     margin: 0 !important;
-    padding: 42% 0 30% !important;
+    padding: 120px 0 0 0 !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -879,7 +960,7 @@ a.cta span {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .c-nav-links span.links-container a {
+  .c-nav-links span.links-container a.c-nav-link {
     padding: 20px 0;
     margin: 0 !important;
     text-align: center;
@@ -888,11 +969,16 @@ a.cta span {
     font-weight: 600;
     font-size: 18px;
   }
-  .c-nav-links span.links-container a:last-child {
+  .c-nav-links span.links-container div {
+    margin-top: 30px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .c-nav-links span.links-container a.c-nav-link:last-child {
     position: relative;
   }
-  .c-nav-links span.links-container a:last-child::after {
-    display: none !important;
+  .c-nav-links span.links-container a.c-nav-link:last-child::after {
+    display: none;
   }
   .c-nav-links .close-btn {
     position: absolute;
@@ -915,23 +1001,6 @@ a.cta span {
   }
   .c-nav-links.open .sidebar_logo::after {
     display: none;
-  }
-  .c-nav-links.open .social-links {
-    display: block !important;
-    position: absolute;
-    bottom: 100px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-  }
-  .c-nav-links.open .social-links a {
-    margin-right: 30px;
-  }
-  .c-nav-links.open .social-links a:last-child {
-    margin-right: 0;
-  }
-  .c-nav-links.open .social-links a::after {
-    display: none !important;
   }
   .header-logo-link::after {
     height: 200px;
@@ -1212,6 +1281,30 @@ a.cta span {
   .all-trainings img.pattern3 {
     bottom: 10px;
     height: 120px;
+  }
+  .clients-container.main-contact {
+    margin-top: 180px;
+    position: relative;
+  }
+  .clients-container.main-contact .clients {
+    z-index: 1;
+    overflow: hidden !important;
+    display: block !important;
+    width: 95%;
+    margin-top: -330px;
+    z-index: 1;
+    display: block;
+  }
+  .clients-container.main-contact .clients .phone {
+    margin: 30px 0;
+  }
+  .clients-container.main-contact .clients p {
+    font-size: 14px;
+  }
+  .clients-container.main-contact .clients .pattern6 {
+    right: -60px;
+    bottom: 20px !important;
+    height: 90px;
   }
 }
 /*# sourceMappingURL=custom.css.map */

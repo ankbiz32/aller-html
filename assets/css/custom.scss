@@ -62,7 +62,7 @@ a.cta{
 
 @media(max-width:4500px){
     nav{
-        .c-nav-links a:last-child{
+        .c-nav-links a.c-nav-link:nth-last-child(2){
             position: relative;
             &::after{
                 content: "";
@@ -761,6 +761,39 @@ a.cta{
         }
         
     }
+
+    .clients-container.main-contact{
+        color:#ffffff77;
+        margin-top: 230px;
+        position: relative;
+        .clients{
+            position: relative;
+            background-color: #1381A5;
+            width: 60%;
+            position: absolute;
+            margin-top: -330px;
+            padding-right: 0px;
+            padding-left: 10%;
+            
+            z-index: 1;
+            display: block;
+            .phone{
+                margin: 30px 0;
+            }
+            p{
+                color:#ffffffff !important;
+            }
+            .pattern6{
+                position: absolute;
+                right: -60px;
+                top: 20px;
+                z-index: 3;
+                height: 140px;
+                opacity: 0.1;
+            }
+
+        }
+    }
 }
 
 @media(max-width:1366px){
@@ -827,11 +860,66 @@ a.cta{
     }
 }
 
+@media(max-width:1050px){
+    .header-logo-link{
+        &::after{
+            height: 200px;
+        }
+    }
+    header{
+        height: auto;
+        .content{
+            margin-top: 170px;
+            h1{
+                font-weight: 700;
+                font-size: 30px;
+            }
+            a.cta{
+                background-color: #F7921F;
+            }
+        }
+        .header-cards{
+            margin-top: 0 !important;
+            padding-top: 20px;
+            background-color: white !important;
+            .column{
+                flex: 0 0 100%;
+            }
+            .cardL{
+                margin: 0 15px;
+            }
+            .cardM{
+                margin: 20px 15px !important;
+            }
+            .cardR{
+                margin: 0 15px;
+            }
+        }
+        &::before{
+            z-index: -1;
+        }
+        .nml-header-vid{
+            display: none !important;
+        }
+    }
+    .c-nav-links{
+        span.links-container{
+            a.c-nav-link:nth-last-child(2){
+                position: relative;
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @media(max-width:768px){
     .c-nav-links{
+        overflow-y: scroll;
         transform:translateX(100%);
         margin: 0 !important;
-        padding: 42% 0 30% !important;
+        padding: 120px 0 0 0 !important;
         position: fixed;
         top: 0;left: 0;
         height: 100vh;
@@ -844,7 +932,7 @@ a.cta{
             background: #d9f2fa !important;
             display: flex !important;
             flex-wrap: wrap;
-            a{
+            a.c-nav-link{
                 padding: 20px 0;
                 margin: 0 !important;
                 text-align: center;
@@ -852,10 +940,14 @@ a.cta{
                 font-weight: 600;
                 font-size: 18px;
             }
-            a:last-child{
+            div{
+                margin-top: 30px;
+                flex-basis: 100%;
+            }
+            a.c-nav-link:last-child{
                 position: relative;
                 &::after{
-                    display: none !important;
+                    display: none;
                 }
             }
         }
@@ -882,23 +974,6 @@ a.cta{
             }
             &::after{
                 display: none;
-            }
-        }
-        .social-links{
-            display: block !important;
-            position: absolute;
-            bottom: 100px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            a{
-                margin-right: 30px;
-                &:last-child{
-                    margin-right: 0;
-                }
-            }
-            a::after{
-                display: none !important;
             }
         }
     }
@@ -1205,6 +1280,34 @@ a.cta{
             height: 120px;
         }
         
+    }
+
+    .clients-container.main-contact{
+        margin-top: 180px;
+        position: relative;
+        .clients{
+            z-index: 1;
+            overflow: hidden !important;
+            display: block !important;
+            
+            width: 95%;
+            margin-top: -330px;
+            
+            z-index: 1;
+            display: block;
+            .phone{
+                margin: 30px 0;
+            }
+            p{
+                font-size: 14px;
+            }
+            .pattern6{
+                right: -60px;
+                bottom: 20px !important;
+                height: 90px;
+            }
+
+        }
     }
 
 }
